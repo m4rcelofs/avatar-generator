@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gerador de Fardas</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.7.2/cropper.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/bootstrap-material-design.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/ripples.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">
+        Gerador de Fardas
+      </h1>
+      <div class="jumbotron">
+        <h2>
+          1. Escolha a imagem
+        </h2>
+        <div class="form-group">
+          <input id="input" type="file" accept="image/*"/>
+          <div class="input-group">
+            <input readonly="" class="form-control" placeholder="Escolha uma imagem..." type="text">
+            <span class="input-group-btn input-group-sm">
+              <button type="button" class="btn btn-fab btn-fab-mini">
+                <i class="material-icons">folder</i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="hidden">
+        <div class="jumbotron">
+          <h2>
+            2. Ajuste o corte
+          </h2>
+          <div class="col-md-12">
+            <div>
+              <img id="cropArea">         
+            </div>
+          </div>
+        </div>
+        
+        <div  class="jumbotron">
+          <h2>
+            3. Salve sua farda!
+          </h2>
+          <div>
+            <canvas id="preview" width="128" height="128" class="center-block"></canvas>
+          </div>
+          <a id="save" class="btn btn-raised btn-block btn-primary">Salvar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.7.2/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.3/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/ripples.min.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.0.4/firebase.js"></script> -->
+    <script src="index.js"></script>
+
+  </body>
+</html>
